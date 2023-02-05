@@ -1,0 +1,32 @@
+{%- assign mod_timestamp = "now" | date: "%s" | plus: 0 -%}
+{%- assign modified_time = mod_timestamp | date: "%FT%T%z" -%}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ 'assets/css/styles.css' | relative_url }}">
+    <link rel="shortcut icon" href="{{ 'favicon.ico' | relative_url }}" type="image/x-icon">
+    <meta name="author" content="Stéphane Calderoni">
+    <meta name="description" content="This project uses a Dallas DS18B20 temperature sensor to turn your ESPboy into a digital thermometer with a real-time graphical display of temperature readings.">
+    <meta name="keywords" content="espboy, esp8266, retrogaming, handheld, iot, stem-education">
+    <meta property="og:type" content="library">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="{{ site.title }}">
+    <meta property="og:site_name" content="m1cr0lab tinkers with the ESPboy">
+    <meta property="og:description" content="This project uses a Dallas DS18B20 temperature sensor to turn your ESPboy into a digital thermometer with a real-time graphical display of temperature readings.">
+    <meta property="og:image" content="{{ 'assets/images/thermometer-128x128.gif' | relative_url }}">
+    <meta property="article:author" content="Stéphane Calderoni">
+    <meta property="article:published_time" content="2023-02-05T17:00:00+0400">
+    <meta property="article:modified_time" content="{{ modified_time }}">
+    <script type="module" src="{{ 'assets/js/install-button.js' | relative_url }}"></script>
+    <script src="{{ 'assets/js/app.js' | relative_url }}"></script>
+</head>
+
+<body>
+    <div class="page">
+        {{ content }}
+    </div>
+</body>
+
+</html>

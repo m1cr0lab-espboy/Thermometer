@@ -1,0 +1,17 @@
+{
+  "name": "Thermometer",
+  "version": "v1.0",
+  "new_install_prompt_erase": false,
+  "new_install_improv_wait_time": 0,
+  "builds": [
+    {
+      "chipFamily": "ESP8266",
+      "parts": [
+        {
+          "path": "thermometer.bin",
+          "offset": 0
+        }
+      ]
+    }
+  ]
+}
